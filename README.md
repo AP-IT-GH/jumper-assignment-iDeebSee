@@ -26,41 +26,41 @@ In dit project gaan we werken met ML-agents. ML-agents zorgt er eigelijk voor da
 
 Ons environment bestaat uit een plane, obstacle, wall, agent en text. Op de afbeelding zie je de scene waarmee we starten.
 
-![](Afbeeldingen\Scene.png)
+![](Afbeeldingen/Scene.png)
 
 ### Plane
 
 De plane is het blauwe veld waar de obstacles en agent op spelen/trainen. Daarop komen ook de obstacles te voorschijn.
 
-![](Afbeeldingen\Plane.png)
+![](Afbeeldingen/Plane.png)
 
 ### Obstacle
 
 -   Groene obstacle: De groene obstacle is een obstacle waar de agent wel door mag. Zo krijgt hij zijn rewards. Rewards zijn nodig zodat de agent weet dat hij goed bezig is. Hij krijgt dus pluspunten als hij door het groene obstacle gaat zonder te springen.
 
-![](Afbeeldingen\GreenObstacle.png)
+![](Afbeeldingen/GreenObstacle.png)
 
 -   Rode Obstacle: De rode obstacle is het geen waar de agent over moet springen. Als hij deze raakt, krijgt hij minpunten zodat hij weet dat hij daar niet door mag gaan.
 
-![](Afbeeldingen\RedObstacle.png)
+![](Afbeeldingen/RedObstacle.png)
 
 ### Wall
 
 De wall staat achter de agent. De wall detecteerd welke obstacle de wall aanraakt. Als de agent een obstacle raakt, dan verdwijnt deze obstacle. Als de agent over de obstacle springt, dan raakt de obstacle de wall aan en kan dan zo berekenen hoeveel punten hij verdient of niet.
 
-![](Afbeeldingen\Wall.png)
+![](Afbeeldingen/Wall.png)
 
 ### Agent
 
 De agent is de protagonist in dit verhaal. Hij moet ervoor zorgen door meerdere keren te trainen, dat hij over de juiste obstacle springt. Zoals je kan zien op de afbeelding zie je dat hij kan zien wat er voor hem staat.
 
-![](Afbeeldingen\Agent.png)
+![](Afbeeldingen/Agent.png)
 
 ### Text
 
 De tekst is simpel weg gewoon om de punten van de agent te volgen. Zo kan je zelf zien hoe hij het doet.
 
-![](Afbeeldingen\Text.png)
+![](Afbeeldingen/Text.png)
 
 ## Scripts
 
@@ -70,7 +70,7 @@ Er zijn verschillende scripts dat ervoor zorgen dat alles juist zijn taken afhan
 
 De environment heeft een belangrijke script. Deze script zorgt ervoor dat alles zowat samenhangt. In de inspector ziet de script er zo uit.
 
-![](Afbeeldingen\EnvScriptInspector.png)
+![](Afbeeldingen/EnvScriptInspector.png)
 
 Daarin zie je verschillende prefabs. Je sleept de juiste prefab naar het juiste vakje zodat het spel herkent welke obstacle de groene is of de rode.
 
@@ -161,7 +161,7 @@ public class EnvironmentJumper : MonoBehaviour
 
 De groene en rode obstacles hebben beide een script. De groene obstacle heeft een script genaamd Obstacle Move Good. De rode heeft een script genaamd Obstacle Move. De inspector ziet er bij beide hetzelfde uit. Je kan de speed daar aanpassen.
 
-![](Afbeeldingen\GrObstInspector.png)
+![](Afbeeldingen/GrObstInspector.png)
 
 In de scripts zelf is er ook niet veel verschil. Enigste verschil is bij de OncollisionEnter functie. Bij de rode obstacle een krijgt de agent als reward ``` agent.AddReward(1f); ```  en bij de groene obstacle script staat er ``` agent.AddReward(-1f); ```. Onderaan zie je hoe de script eruit ziet voor de rode obstacle.
 ```
@@ -207,7 +207,7 @@ In de scripts zelf is er ook niet veel verschil. Enigste verschil is bij de Onco
 
 De agent heeft verschillende scripts. Namelijk een Ray Perception Sensor 3D script om de ogen te spele van de agent.
 
-![](Afbeeldingen\RayPercSens.png)
+![](Afbeeldingen/RayPercSens.png)
 
 ```
 [AddComponentMenu("ML Agents/Ray Perception Sensor 3D", (int)MenuGroup.Sensors)]
@@ -264,7 +264,7 @@ De agent heeft verschillende scripts. Namelijk een Ray Perception Sensor 3D scri
 
 Het volgende script dat de agent heeft is de Behavior Parameters. Daarin kan je het gedrag van de agent aanpassen. Deze script bevat ook het neural network bestand.
 
-![](Afbeeldingen\BehPar.png)
+![](Afbeeldingen/BehPar.png)
 
 
 ```
@@ -539,7 +539,7 @@ public enum BehaviorType
 
 De agent kan springen door de Jumper Agent script. Daarin kan je verschillende dingen aanpassen in verband met de jump van de agent. Ook ga je daar je scoreboard in slepen.
 
-![](Afbeeldingen\JumperAgent.png)
+![](Afbeeldingen/JumperAgent.png)
 
 ```
 public class JumperAgent : Agent
@@ -639,7 +639,7 @@ public class JumperAgent : Agent
 
 De laatste script dat de agent bevat is de Decision Requester. Deze script zorgt ervoor dat de agent moet kiezen of hij nu moet springen of niet.
 
-![](Afbeeldingen\Decision.png)
+![](Afbeeldingen/Decision.png)
 
 ```
 /// <summary>
@@ -765,7 +765,7 @@ De laatste script dat de agent bevat is de Decision Requester. Deze script zorgt
 
 Zodra je alles hebt uitgewerkt op unity, kan je de agent nu trainen via anaconda. Als je anaconda opent, ga je naar environments. Daarna ga je naar unity_rl en open je de terminal.
 
-![](Afbeeldingen\anacondastep1.png)
+![](/Afbeeldingen/anacondastep1.png)
 
 Als de terminal open staat ga je naar de path van je project. Daarna voer je deze command uit ``` mlagents-learn Mover.yaml --run-id [NAME] [OPTIONEEL] --resume ```
 (voor verder te trainen). Dan zou je terug naar unity moeten gaan en op play klikken. Zo begin je de training.
