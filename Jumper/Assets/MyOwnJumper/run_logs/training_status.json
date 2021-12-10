@@ -1,0 +1,65 @@
+{
+    "Mover": {
+        "checkpoints": [
+            {
+                "steps": 1499984,
+                "file_path": "results\\MyOwnJumper\\Mover\\Mover-1499984.onnx",
+                "reward": null,
+                "creation_time": 1639158028.9271896,
+                "auxillary_file_paths": [
+                    "results\\MyOwnJumper\\Mover\\Mover-1499984.pt"
+                ]
+            },
+            {
+                "steps": 1688368,
+                "file_path": "results\\MyOwnJumper\\Mover\\Mover-1688368.onnx",
+                "reward": null,
+                "creation_time": 1639158138.6614172,
+                "auxillary_file_paths": [
+                    "results\\MyOwnJumper\\Mover\\Mover-1688368.pt"
+                ]
+            },
+            {
+                "steps": 1999984,
+                "file_path": "results\\MyOwnJumper\\Mover\\Mover-1999984.onnx",
+                "reward": null,
+                "creation_time": 1639158384.2783308,
+                "auxillary_file_paths": [
+                    "results\\MyOwnJumper\\Mover\\Mover-1999984.pt"
+                ]
+            },
+            {
+                "steps": 2220016,
+                "file_path": "results\\MyOwnJumper\\Mover\\Mover-2220016.onnx",
+                "reward": null,
+                "creation_time": 1639158511.8130817,
+                "auxillary_file_paths": [
+                    "results\\MyOwnJumper\\Mover\\Mover-2220016.pt"
+                ]
+            },
+            {
+                "steps": 2264976,
+                "file_path": "results\\MyOwnJumper\\Mover\\Mover-2264976.onnx",
+                "reward": null,
+                "creation_time": 1639158552.924809,
+                "auxillary_file_paths": [
+                    "results\\MyOwnJumper\\Mover\\Mover-2264976.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2264976,
+            "file_path": "results\\MyOwnJumper\\Mover.onnx",
+            "reward": null,
+            "creation_time": 1639158552.924809,
+            "auxillary_file_paths": [
+                "results\\MyOwnJumper\\Mover\\Mover-2264976.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.10.0"
+    }
+}
