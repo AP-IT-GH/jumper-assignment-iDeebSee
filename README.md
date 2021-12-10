@@ -774,4 +774,4 @@ Als de terminal open staat ga je naar de path van je project. Daarna voer je dez
 
 Nadat we de code hadden bekeken en de fouten eruit hebben gehaald, ging de training vlotter. Onderaan kan je de results zien via tensorboard. Dat kan je vinden door deze command uit te voeren: ```tensorboard --logdir results```
 
-![](Afbeeldingen\TensorBoard.png)
+![](/Afbeeldingen/TensorBoard.png)
