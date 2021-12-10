@@ -758,5 +758,20 @@ De laatste script dat de agent bevat is de Decision Requester. Deze script zorgt
         }
     }
 
-    
+
 ```
+
+## Training
+
+Zodra je alles hebt uitgewerkt op unity, kan je de agent nu trainen via anaconda. Als je anaconda opent, ga je naar environments. Daarna ga je naar unity_rl en open je de terminal.
+
+![](Afbeeldingen\anacondastep1.png)
+
+Als de terminal open staat ga je naar de path van je project. Daarna voer je deze command uit ``` mlagents-learn Mover.yaml --run-id [NAME] [OPTIONEEL] --resume ```
+(voor verder te trainen). Dan zou je terug naar unity moeten gaan en op play klikken. Zo begin je de training.
+
+## Resultaat
+
+Nadat we de code hadden bekeken en de fouten eruit hebben gehaald, ging de training vlotter. Onderaan kan je de results zien via tensorboard. Dat kan je vinden door deze command uit te voeren: ```tensorboard --logdir results```
+
+![](Afbeeldingen\TensorBoard.png)
